@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="hideform()">
+    <div class="container">
+        <div class="error" id="err">
+            pls fill in all fields...
+        </div>
+        <div class="invoice">
+            
+           <div class="head">
+            <h3 id="cusNameOup">customer name</h3>
+           </div>
+           <div class="ads">New Invoice</div>
+            <table class="table" cellspacing="15px">
+               
+                <th>ID</th>
+                <th>DESCRIPTION</th>
+                <th>AMOUNT</th>
+
+                <tr>
+                    <td id="snOup"></td>
+                    <td id="decOup"></td>
+                    <td id="amountOup"></td>
+                </tr>
+                <tr>
+                    <td id="snTwoOup"></td>
+                    <td id="decTwoOup"></td>
+                    <td id="amountTwoOup"></td>
+                </tr>
+                <tr>
+                    <td id="snThreeOup"></td>
+                    <td id="decThreeOup"></td>
+                    <td id="amountThreeOup"></td>
+                </tr>
+                <tr>
+                    <td id="snFourOup"></td>
+                    <td id="decFourOup"></td>
+                    <td id="amountFourOup"></td>
+                </tr>
+            </table>
+            <div id="total">Total</div>
+
+            <button class="btn" id="invBtn" type="button">FILL INVOICE..</button>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div class="form">
+                <a href="#" class="close" onclick="closenav()" style="font-size: 20px; font-family:verdana; padding:12px; text-decoration:none; color: red;">X</a>
+                <form action="#" method="post">
+                    <input type="text" name="" id="name" placeholder="customer name..." require>
+                    <input type="number" placeholder="Amount" name="" id="amount" required>
+
+                    <input type="number" placeholder="Amount_Two" name="" id="amountTwo" required>
+                    
+                    <input type="number" placeholder="Amount_three" name="" id="amountThree" required>
+
+                    <input type="number" placeholder="Amount_Four" name="" id="amountFour" required>
+
+                    <input type="number" class="id" name="" size="10" id="sn" placeholder="#ID_1">
+                    <input type="number" class="id" name="" size="10" id="snTwo"  placeholder="#ID_2">
+                    <input type="number" class="id" name="" size="10" id="snThree" placeholder="#ID_3">
+                    <input type="number" class="id" name="" size="10" id="snFour" placeholder="#ID_4">
+
+
+
+                    <textarea name="" id="dec" placeholder="Description Of Goods..." cols="" rows=""></textarea>
+
+                    <textarea name="" placeholder="Description Of Goods..." id="decTwo" cols="" rows=""></textarea>
+                    <textarea name="" placeholder="Description Of Goods..." id="decThree" cols="" rows=""></textarea>
+                    <textarea name="" placeholder="Description Of Goods..." id="decFour" cols="" rows=""></textarea>
+
+                    <input type="submit" value="Preview Changes" id="prebtn" onclick="hideform()">
+                    <input type="reset" value="Clear all" id="btnr">  
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

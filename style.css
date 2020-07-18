@@ -1,0 +1,250 @@
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    width:100%;
+    height: 100vh;
+}
+
+.container{
+    margin:10px 200px 20px 200px;
+    overflow: hidden;
+   box-shadow: 0 0 3px grey;
+
+}
+.container .error{
+    width: 600px;
+    height: 80px;
+    background: rgba(245, 158, 158, 0.7);
+    text-align: center;
+    color: #000;
+    z-index: 10;
+    position: relative;
+    top: 350px;
+    border-radius: 2px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-family: verdana;
+    visibility: hidden;
+
+}
+.invoice{
+    height: 750px;
+    background: 0;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin-top: -85px;
+    
+}
+
+@keyframes slide{
+    0%{
+        top:50%;
+        transform: translateY(50px);
+    }
+    100%{
+        top:0;
+        transform: translateY(-50px);
+    }
+}
+
+.btn{
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    margin-left: 400px;
+}
+.table {
+    width: 95%;
+    height:200px;
+    padding:8px;
+    margin:15px 20px 20px 20px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+.table th{
+    padding: 14px;
+    background-color: lightgray;
+
+}
+.table td{
+    background-color:none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    margin: 12px;
+    border-bottom: 2px solid rgb(196, 196, 196);
+    font-weight:900;
+    font-size: 15px;
+}
+.table tr{
+    background:none;
+    outline: none;
+    height: 70px;
+    border-bottom: 2px solid black;
+}
+.invoice .ads{
+    z-index: 5;
+    width: 150px;
+    height:34px;
+    background: red;
+    text-align:center;
+    font-family:verdana;
+    font-weight: 800;
+    color: #000;
+    transform: rotate(-45deg);
+    margin: -10px 0px 30px -20px;
+    position: relative;
+    top:15px;
+    left:-12px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.invoice .head{
+    background: rgb(143, 132, 192);
+    margin-top: -150px;
+    position: relative;
+    top: 90px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.head h3{
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-transform: capitalize;
+    margin-top:30px !important;
+    padding:14px;
+    color: #fff;
+}
+
+.alert{
+    width: 100%;
+    height: 39px;
+    background-image: linear-gradient(rgb(238, 18, 84),red);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: forte;
+    font-style: italic;
+    text-transform: capitalize;
+    position: relative;
+    top:0;
+    left: 0;
+    right:0;
+    margin-top:-20px;
+    visibility: hidden;
+}
+
+#total{
+    font-size: 15px;
+    font-weight: 800;
+    font-family: verdana;
+    width: 300px;
+    float: right;
+    margin-left: 600px;
+    padding: 12px;
+    height: 45px;
+    background-color: rgba(110, 186, 236, 0.651);
+}
+/* FORM STYLE */
+
+.form{
+    width: 550px;
+    overflow:scroll;
+    height: auto;
+    box-shadow: 0 0 3px grey;
+    display: flex;
+    margin: 20px;
+    background-color: #fff;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility:;
+    animation: slide 10s linear ease-in-out;
+    transition: .10s;
+}
+.form form{
+    margin: 12px;
+}
+.form input[type=text],input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin-top: 10px;
+  }
+
+  input[type=reset] {
+    background-color: rgb(190, 1, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+input[type=submit]{
+    background: rgb(24, 24, 212);
+    color: white;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.form .id{
+    width: 100px !important;
+    margin-left:12px;
+}
+
+
+
+
+
+
+
+
